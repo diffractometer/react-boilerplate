@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "parallelshell \"npm run lint:tools\" \"npm run test:watch\" \"npm run open:src\"",
-    "open:src": "node server.js",
-    "build:html": "node buildHtml.js",
+    "open:src": "node bin/devServer.js",
+    "build:html": "node bin/buildHtml.js",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
-    "prebuild" : "npm run clean-dist && npm run build:html",
+    "prebuild": "npm run clean-dist && npm run build:html",
     "lint:tools": "eslint webpack.config.js tools",
     "test:watch": "npm run test -- --watch"
   },
@@ -19,13 +19,16 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",
-    "redux": "^3.1.7"
+    "redux": "^3.1.7",
+    "watch": "0.17.1"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "babel": "^6.3.26",
     "babel-eslint": "^5.0.0-beta8",
     "babel-loader": "^6.2.1",
+    "babel-plugin-react-transform": "1.1.1",
+    "babel-plugin-react-display-name": "2.0.0",
     "css-loader": "^0.23.1",
     "node-sass": "^3.4.2",
     "parallelshell": "^2.0.0",
@@ -34,10 +37,13 @@
     "webpack": "1.12.11",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4",
-    "babel-core": "^6.4.5",
     "eslint": "^1.10.3",
     "eslint-loader": "^1.2.1",
     "eslint-plugin-react": "^3.16.1",
+    "react-transform-hmr": "^1.0.1",
+    "react-transform-catch-errors": "1.0.1",
+    "redbox-react": "1.2.0",
+    "file-loader": "0.8.5",
     "cheerio": "0.19.0"
   }
 }
