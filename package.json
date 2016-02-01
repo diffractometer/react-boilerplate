@@ -6,6 +6,10 @@
   "scripts": {
     "start": "parallelshell \"npm run lint:tools\" \"npm run test:watch\" \"npm run open:src\"",
     "open:src": "node server.js",
+    "build:html": "node buildHtml.js",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "prebuild" : "npm run clean-dist && npm run build:html",
     "lint:tools": "eslint webpack.config.js tools",
     "test:watch": "npm run test -- --watch"
   },
@@ -33,6 +37,7 @@
     "babel-core": "^6.4.5",
     "eslint": "^1.10.3",
     "eslint-loader": "^1.2.1",
-    "eslint-plugin-react": "^3.16.1"
+    "eslint-plugin-react": "^3.16.1",
+    "cheerio": "0.19.0"
   }
 }
