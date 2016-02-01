@@ -1,6 +1,31 @@
 var webpack = require('webpack');
 var path = require('path');
 
+var getPlugins = function(env) {
+  var GLOBALS = {
+    'process.env.NODE_ENV': JSON.stringify(env),
+    __DEV__: env == 'development'
+  };
+
+  var plugins = [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.DefinePlugin(GLOBALS) //Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
+  ];
+
+  switch(env) {
+    case 'production':
+      plugins.push(new webpack.optimize.DedupePlugin());
+      plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true, sourceMap: true}));
+      break;
+    case 'development':
+      plugins.push(new webpack.HotModuleReplacementPlugin());
+      plugins.push(new webpack.NoErrorsPlugin());
+      break;
+  }
+
+  return plugins;
+};
+
 var getEntry = function(env) {
   var entry = [];
   if (env=='development') {
@@ -27,7 +52,6 @@ var getLoaders = function () {
 };
 
 module.exports = function getConfig(env) {
-  env = "development"
   return {
     debug: true,
     devtool: env == 'production' ? 'source-map' : 'cheap-module-eval-source-map',
@@ -37,11 +61,7 @@ module.exports = function getConfig(env) {
         publicPath: '',
         filename: "bundle.js"
     },
-    plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-    ],
+    plugins: getPlugins(env),
     module: {
       loaders: getLoaders()
     }
