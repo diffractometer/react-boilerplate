@@ -1,17 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-
+//import { Provider } from 'react-redux';
+//import configureStore from './store/configureStore';
 import './styles/styles.scss';
 
-class App extends React.component {
+class HelloMessage extends React.Component {
   render() {
     return (
-      <h1>React!</h1>
-    )
+      <h1>hello world</h1>
+    );
   }
 }
 
 render(
-  <h1>yo</h1>
-)
+  <HelloMessage />, document.getElementById('app')
+);
