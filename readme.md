@@ -1,3 +1,3 @@
 ## React Boilerplate
 
-influenced greatly by: https://github.com/coryhouse/react-slingshot
+copied a lot of code from: https://github.com/coryhouse/react-slingshot
