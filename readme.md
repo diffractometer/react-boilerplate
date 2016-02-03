@@ -10,10 +10,13 @@ This uses, or is about to use, the following technologies:
 
 * react
 * redux
+* babel
+* eslint
+
 * react-router-redux
 * react bootstrap
 * webpack
-* babel
-* eslint
-* style-loader, sass-loader
+
+* style-loader
+* sass-loader
 
