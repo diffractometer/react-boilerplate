@@ -39,7 +39,7 @@ npm start
 
 To run in dev mode
 
-## Dependencies:
+## Dependencies
 
 * react
 * redux
@@ -54,7 +54,7 @@ To run in dev mode
 
 ## TODO
 
-* better documentation
+* documentation
 * jasmine tests
 * react-router-redux 
 * clean up redux
