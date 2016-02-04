@@ -4,7 +4,7 @@
   "description": "React boilerplate.",
   "main": "index.js",
   "scripts": {
-    "start": "parallelshell \"npm run lint:tools\" \"npm run test:watch\" \"npm run open:src\"",
+    "start": "parallelshell \"npm run lint:tools\" \"npm run open:src\"",
     "open:src": "node bin/devServer.js",
     "open:dist": "babel-node bin/distServer.js",
     "build:html": "node bin/buildHtml.js",
