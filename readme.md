@@ -51,3 +51,10 @@ To run in dev mode
 * style-loader
 * sass-loader
 * express for deploying
+
+## TODO
+
+* better documentation
+* jasmine tests
+* react-router-redux 
+* clean up redux
