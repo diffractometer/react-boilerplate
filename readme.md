@@ -17,3 +17,8 @@ This uses the following technologies:
 * webpack
 * style-loader
 * sass-loader
+* express for deploying
+
+TODO:
+
+* document commands

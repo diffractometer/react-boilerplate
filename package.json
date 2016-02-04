@@ -4,7 +4,7 @@
   "description": "React boilerplate.",
   "main": "index.js",
   "scripts": {
-    "start": "parallelshell \"npm run lint:tools\" \"npm run open:src\"",
+    "dev": "parallelshell \"npm run lint:tools\" \"npm run open:src\"",
     "open:src": "node bin/devServer.js",
     "open:dist": "babel-node bin/distServer.js",
     "build:html": "node bin/buildHtml.js",
@@ -14,11 +14,15 @@
     "lint:tools": "eslint webpack.config.js tools",
     "test:watch": "npm run test -- --watch",
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel/register --recursive \"./src/**/*.spec.js\"",
-    "build": "babel-node bin/build.js && npm run open:dist"
+    "build": "babel-node bin/build.js && npm run open:dist",
+    "start": "node bin/prodServer.js"
   },
   "author": "Hunter Husar",
   "license": "MIT",
   "dependencies": {
+    "compression": "1.6.1",
+    "cors": "2.7.1",
+    "express": "4.13.4",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",
