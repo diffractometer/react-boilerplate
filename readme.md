@@ -59,6 +59,5 @@ To run in dev mode
 
 * documentation
 * jasmine tests
-* react-router-redux 
-* clean up redux
+* clean up redux?
 * bootstrap
