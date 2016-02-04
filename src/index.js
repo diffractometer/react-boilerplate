@@ -6,6 +6,7 @@ import './styles/styles.scss';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 import Foo from './components/Foo.js';
 import Bar from './components/Bar.js';
+import Yaz from './components/Yaz.js';
 
 const store = configureStore();
 
@@ -17,6 +18,7 @@ class App extends React.Component {
         <ul>
           <li><Link to="/foo">Foo</Link></li>
           <li><Link to="/bar">Bar</Link></li>
+          <li><Link to="/yaz">Yaz</Link></li>
         </ul>
         {this.props.children}
       </div>
@@ -31,6 +33,7 @@ render((
         <IndexRoute component={Foo} />
         <Route path="foo" component={Foo} />
         <Route path="bar" component={Bar} />
+        <Route path="yaz" component={Yaz} />
       </Route>
     </Router>
   </Provider>

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import authAppState from './auth';
+import { routeReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
-  authAppState
+  routeReducer
 });
 
 export default rootReducer;

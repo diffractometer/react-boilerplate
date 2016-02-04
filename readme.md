@@ -4,7 +4,8 @@
 
 ![dude](http://media.bizj.us/view/img/750421/underconstruction256*400xx256-256-0-0.jpg)
 
-This is some React Boilerplate.
+This is some React Boilerplate which contains a kitchensink of tools that a lot
+of people use.
 
 Shoutout to [react-slingshot](https://github.com/coryhouse/react-slingshot "Title") where most of the code and structure is stolen from.
 
@@ -50,7 +51,9 @@ To run in dev mode
 * webpack
 * style-loader
 * sass-loader
-* express for deploying
+* browser-sync for dev server
+* express for production server
+* bootstrap
 
 ## TODO
 
@@ -58,3 +61,4 @@ To run in dev mode
 * jasmine tests
 * react-router-redux 
 * clean up redux
+* bootstrap
