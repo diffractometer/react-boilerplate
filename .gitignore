@@ -15,8 +15,5 @@ build/Release
 node_modules/
 node_modules
 
-#dist folder
-dist
-
 # Mac files
 .DS_Store
