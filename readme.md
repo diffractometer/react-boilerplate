@@ -8,12 +8,12 @@ Shoutout to [react-slingshot](https://github.com/coryhouse/react-slingshot "Titl
 
 
 ## Installation
-
 To install run
-
 ```sh
 npm install
 ```
+
+## Usage
 
 To run in dev mode
 
@@ -32,10 +32,6 @@ To test production
 ```sh
 npm start
 ```
-
-## Usage
-
-To run in dev mode
 
 ## Dependencies:
 
