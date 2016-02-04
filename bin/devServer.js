@@ -3,6 +3,7 @@
 
 // Require Browsersync along with webpack and middleware for it
 var browserSync = require('browser-sync');
+var historyApiFallback = require('connect-history-api-fallback');
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
@@ -31,7 +32,9 @@ browserSync({
       }),
 
       // bundler should be the same as above
-      webpackHotMiddleware(bundler)
+      webpackHotMiddleware(bundler),
+
+      historyApiFallback()
     ]
   },
 

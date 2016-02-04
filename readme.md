@@ -1,12 +1,43 @@
-## React Boilerplate
+# React Boilerplate
 
 ### Warning: NOT RELEASED
 
 This is some React Boilerplate.
 
-The structure and code is influenced by / copied from: [react-slingshot](https://github.com/coryhouse/react-slingshot "Title").
+Shoutout to [react-slingshot](https://github.com/coryhouse/react-slingshot "Title") where most of the code and structure is stolen from.
 
-This uses the following technologies:
+
+## Installation
+
+To install run
+
+```sh
+npm install
+```
+
+To run in dev mode
+
+```sh
+npm run dev
+```
+
+To build production
+
+```sh
+npm run build
+```
+
+To test production
+
+```sh
+npm start
+```
+
+## Usage
+
+To run in dev mode
+
+## Dependencies:
 
 * react
 * redux
@@ -18,7 +49,3 @@ This uses the following technologies:
 * style-loader
 * sass-loader
 * express for deploying
-
-TODO:
-
-* document commands

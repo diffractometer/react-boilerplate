@@ -14,18 +14,20 @@
     "lint:tools": "eslint webpack.config.js tools",
     "test:watch": "npm run test -- --watch",
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel/register --recursive \"./src/**/*.spec.js\"",
-    "build": "babel-node bin/build.js && npm run open:dist",
+    "build": "babel-node bin/build.js",
     "start": "node bin/prodServer.js"
   },
   "author": "Hunter Husar",
   "license": "MIT",
   "dependencies": {
     "compression": "1.6.1",
+    "connect-history-api-fallback": "1.1.0",
     "cors": "2.7.1",
     "express": "4.13.4",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",
+    "react-router": "2.0.0-rc5",
     "redux": "^3.1.7"
   },
   "devDependencies": {
