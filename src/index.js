@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import './styles/styles.scss';
-import { Router, Route, Link, hashHistory } from 'react-router';
+import { Router, Route, Link, hashHistory, IndexRoute } from 'react-router';
 import Foo from './components/Foo.js';
 import Bar from './components/Bar.js';
 
@@ -25,10 +25,14 @@ class App extends React.Component {
 }
 
 render((
-  <Router history={hashHistory} >
-    <Route path="/" component={App}>
-      <Route path="foo" component={Foo} />
-      <Route path="bar" component={Bar} />
-    </Route>
-  </Router>), document.getElementById('app')
+  <Provider store={store}>
+    <Router history={hashHistory} >
+      <Route path="/" component={App}>
+        <IndexRoute component={Foo} />
+        <Route path="foo" component={Foo} />
+        <Route path="bar" component={Bar} />
+      </Route>
+    </Router>
+  </Provider>
+  ), document.getElementById('app')
 );
