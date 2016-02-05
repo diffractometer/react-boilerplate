@@ -12,7 +12,7 @@ Shoutout to [react-slingshot](https://github.com/coryhouse/react-slingshot "Titl
 
 ## Installation
 
-To install run
+To install
 
 ```sh
 npm install
@@ -38,20 +38,19 @@ To test production
 npm start
 ```
 
-## Dependencies
+## Includes 
 
-* react
-* redux
-* babel
-* eslint
-* react-router-redux
-* react bootstrap
-* webpack
-* style-loader
-* sass-loader
-* browser-sync for dev server
-* express for production server
-* bootstrap
+* React
+* Redux
+* React-Router-Redux
+* Babel
+* Eslint
+* Webpack
+* Style Loader
+* Sass Loader
+* Browser Sync for dev server
+* Express for production server
+* React Bootstrap
 
 ## TODO
 
