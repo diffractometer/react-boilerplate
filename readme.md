@@ -19,6 +19,8 @@ To install run
 npm install
 ```
 
+## Usage
+
 To run in dev mode
 
 ```sh
@@ -37,9 +39,7 @@ To test production
 npm start
 ```
 
-## Usage
 
-To run in dev mode
 
 ## Dependencies
 
