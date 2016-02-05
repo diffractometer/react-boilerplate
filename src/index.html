@@ -5,13 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <base href="/" />
     <!--[if lte IE 9]>
-    <script src="https://s3.amazonaws.com/openmarkets/eventListener.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.2/es5-shim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.2/es5-sham.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.3.2/ie8.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-shim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-sham.min.js"></script>
     <![endif]-->
+    <script>
+
+    // checks if IE < 10
+    window.isOldIE = function() {
+      var oldIE = false,
+          nav   = window.navigator,
+          ua    = nav.userAgent.toLowerCase();
+
+      if (ua && ua.indexOf('msie') !== -1) {
+        var version = parseInt(ua.split('msie')[1]);
+        if (version < 10) {
+          oldIE = true;
+        }
+      }
+      return oldIE;
+    };
+
+    </script>
   </head>
   <body>
     <div id="app"></div>
