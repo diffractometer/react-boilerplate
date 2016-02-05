@@ -9,8 +9,7 @@ import App from './components/App.js';
 import Foo from './components/Foo.js';
 import Bar from './components/Bar.js';
 import Yaz from './components/Yaz.js';
-
-
+import BarYaz from './components/BarYaz.js';
 
 const store = configureStore();
 
@@ -22,6 +21,7 @@ render((
         <Route path="foo" component={Foo} />
         <Route path="bar" component={Bar} />
         <Route path="yaz" component={Yaz} />
+        <Route path="/bar/yaz" component={BarYaz} />
       </Route>
     </Router>
   </Provider>

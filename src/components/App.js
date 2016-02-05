@@ -6,7 +6,7 @@ import { routeActions } from 'react-router-redux';
 function App({ push, children }) {
   return (
     <div>
-      <Link to="/">R2act Boilerplate</Link>
+      <Link to="/">React Boilerplate</Link>
       <ul>
         <li>
           <button onClick={() => push('/foo')}>Go to /foo</button>
@@ -16,6 +16,9 @@ function App({ push, children }) {
         </li>
         <li>
           <button onClick={() => push('/yaz')}>Go to /yaz</button>
+        </li>
+        <li>
+          <button onClick={() => push('/bar/yaz')}>Go to /bar/yaz</button>
         </li>
       </ul>
       {children}

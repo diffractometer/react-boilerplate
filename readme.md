@@ -1,6 +1,5 @@
 # React Boilerplate
 
-
 ### Warning: NOT RELEASED
 
 ![dude](http://media.bizj.us/view/img/750421/underconstruction256*400xx256-256-0-0.jpg)
@@ -39,8 +38,6 @@ To test production
 npm start
 ```
 
-
-
 ## Dependencies
 
 * react
@@ -59,6 +56,7 @@ npm start
 ## TODO
 
 * documentation
+* travis
+* coveralls
 * jasmine tests
-* clean up redux?
-* bootstrap
+* clean up redux
