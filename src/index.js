@@ -2,29 +2,17 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
-import './styles/styles.scss';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
+
+import './styles/styles.scss';
+import App from './components/App.js';
 import Foo from './components/Foo.js';
 import Bar from './components/Bar.js';
 import Yaz from './components/Yaz.js';
 
-const store = configureStore();
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>React Boilerplate</h1>
-        <ul>
-          <li><Link to="/foo">Foo</Link></li>
-          <li><Link to="/bar">Bar</Link></li>
-          <li><Link to="/yaz">Yaz</Link></li>
-        </ul>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+
+const store = configureStore();
 
 render((
   <Provider store={store}>
